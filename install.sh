@@ -7,10 +7,7 @@ apt upgrade -y
 # INSTALA PACOTES OPCIONAIS
 apt install -y nano lynx net-tools git htop 
 # INSTALA PACOTES OBRIGATORIOS
-apt install -y wget unzip curl lsof default-jdk default-jre imagemagick postfix r-base
-# ALTERANDO ARQUIVO HOSTS PARA CONFIGURACAO LOCAL DO SENTMAIL
-cat /etc/aliases
-read -e $X
+apt install -y wget unzip curl lsof openjdk-8-jdk openjdk-8-jre imagemagick postfix r-base
 # CONFIGURA SENDMAIL
 cd /etc/postfix
 cp $DIR/main.cf .
@@ -39,26 +36,26 @@ echo "Etapa (2/7) concluida!"
 echo "Pressione Ctrl+C para cancelar e Enter para continuar!"
 read -e $X
 cd $DIR
-#chmod 744 jq.sh
-#./jq.sh
+chmod 744 jq.sh
+sudo ./jq.sh
 echo "Etapa (3/7) concluida!"
 echo "Pressione Ctrl+C para cancelar e Enter para continuar!"
 read -e $X
 cd $DIR
-#chmod 744 solr.sh
-#./solr.sh
+chmod 744 solr.sh
+sudo ./solr.sh
 echo "Etapa (4/7) concluida!"
 echo "Pressione Ctrl+C para cancelar e Enter para continuar!"
 read -e $X
 cd $DIR
-#chmod 744 postgresql.sh
-#./postgresql.sh
+chmod 744 postgresql.sh
+sudo ./postgresql.sh
 echo "Etapa (5/7) concluida!"
 echo "Pressione Ctrl+C para cancelar e Enter para continuar!"
 read -e $X
 cd $DIR
-#chmod 744 rserve.sh
-#./rserve.sh
+chmod 744 rserve.sh
+sudo ./rserve.sh
 clear
 echo "Etapa (6/7) concluida!"
 echo " "

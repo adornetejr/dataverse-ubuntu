@@ -28,7 +28,7 @@ rm -f domain.xml
 cp $DIR/domain.xml .
 # ATUALIZA CERTIFICADO SSL DO GLASSFISH
 rm -rf /usr/local/glassfish4/glassfish/domains/domain1/config/cacerts.jks
-cp -f /usr/lib/jvm/java-1.8.0-openjdk/jre/lib/security/cacerts /usr/local/glassfish4/glassfish/domains/domain1/config/cacerts.jks
+cp -f /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/security/cacerts /usr/local/glassfish4/glassfish/domains/domain1/config/cacerts.jks
 # ALTERA PERMICOES PARA USUARIO glassfish
 useradd glassfish
 chown -R glassfish:glassfish /usr/local/glassfish4
