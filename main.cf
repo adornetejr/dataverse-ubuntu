@@ -1,0 +1,9 @@
+myhostname = localhost.localdomain
+mydomain = localdomain
+myorigin = $mydomain
+mydestination = $myhostname, localhost, $mydomain, localhost.localdomain
+mynetworks = 127.0.0.0/8, /32
+relay_domains = $mydestination
+inet_interfaces = all
+inet_protocols = all
+home_mailbox = Maildir/
